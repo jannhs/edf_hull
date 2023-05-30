@@ -1,0 +1,14 @@
+Seed,T1,D1,Ratio1,T2,D2,Ratio2,H,m,Original_m,Percentage_m,Command
+431,282240,352866.408003,1.250235,4032,5100.495996,1.265004,282240,1,160,0.018519,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+617,30660,25384.633236,0.82794,104370,134752.591381,1.291105,15238020,2,649,0.006144,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+132,85608,81825.369796,0.955815,1215,1017.815921,0.837709,11557080,3,9716,0.000515,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+310,23497,20657.632459,0.87916,9753,8058.193935,0.826227,229166241,4,33254,0.00018,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+536,21736,17777.13817,0.817866,115808,119648.244585,1.03316,28604576,5,1570,0.004453,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+477,127648,115265.665292,0.902996,4000,4397.945513,1.099486,15956000,6,4144,0.00193,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+17,171539,132706.863659,0.773625,559,698.913597,1.250293,95890301,7,172337,5.2e-05,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+803,227447,159444.443784,0.701018,53153,53855.330941,1.013213,525630017,8,12204,0.000819,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+750,79960,102212.093234,1.27829,86056,63297.479036,0.735538,860129720,9,20755,0.00053,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+694,58679,41602.155956,0.708979,46008,49631.278184,1.078753,2699703432,10,104690,0.000115,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+50,268296,204564.352756,0.762458,188594,242439.669382,1.285511,3614215416,11,32638,0.000398,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+735,265809,332707.045171,1.251677,175878,149696.405607,0.851138,15583318434,12,147233,9.5e-05,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1
+113,142395,114558.367674,0.804511,196095,213236.25131,1.087413,1861529835,13,22569,0.000665,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1

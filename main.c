@@ -36,7 +36,7 @@ struct argp_option options[] = {
      "List of mandatory options to include for random generation of task sets:",
      7},
     {"rand-seed", EDFH_SEED, "SEED", 0,
-     "Specify seed used in task set generation. Unnecessary if option "
+     "Specify seed used in task set generation. Ignored if option "
      "\'num-repeat\' is specified."},
     {"num", EDFH_NUM_TASKS, "NUM_TASKS", 0,
      "Specify number of tasks in task set."},
@@ -105,20 +105,6 @@ static error_t parser(int key, char *arg, struct argp_state *state) {
           arguments->add_constraints_info) {
         arguments->rand_setup.n_repeat =
             1; /*input for option 'num-repeat' is ignored */
-      }
-      if (arguments->rand_setup.seed != 0 &&
-          arguments->rand_setup.n_repeat > 1) {
-        argp_error(
-            state,
-            "Option '--rand-seed' is ignored if \'--num-repeat\' is "
-            "specified.\n\nSince '--num-repeat' indicates the amount of task "
-            "sets to be randomly generated and passed as input to the "
-            "procedure,\n"
-            "the value for seed is pre-determined as "
-            "1 for the first task set's generation and increased by 1 for each "
-            "subsequent\ntask set.\n"
-            "So, you might want to remove either option '--num-repeat' or "
-            "option '--rand-seed'.\n");
       }
     }
     break;
@@ -265,6 +251,9 @@ void iterate_random_mode() {
   free(filename);
 }
 
+/**
+ * Creates a filename that describes the settings used for the randomization
+ */
 void create_descriptive_filename(char *filename) {
   char *n_repeats;
   switch (arguments.rand_setup.n_repeat) {
@@ -350,15 +339,29 @@ int verify_arguments_random_mode() {
             "--relative-dl-var=0.1).\n",
             __FILE__, __LINE__);
     return 0;
+    /* The two following */
   }
 
-  /* The two following */
   if (settings->eps == 0) {
     fprintf(stderr,
             "%s:%d: Tolerance for hyperperiod equals zero. There may be issues "
             "with floating "
             "point. You might want to add, for example \"--eps=1e-9\".\n",
             __FILE__, __LINE__);
+  }
+
+  if (settings->seed != 0 && settings->n_repeat > 1) {
+    printf(
+        "Warning: since option'--num-repeat' indicates the amount "
+        "of task "
+        "sets to be randomly generated and passed as input to the "
+        "procedure,\n"
+        "the value for seed is pre-determined as "
+        "1 for the first task set's generation and increased by 1 for each "
+        "subsequent task set.\n"
+        "This is not a problem if you are  retrieving additional information "
+        "about a particular task set. \nIf that is not the case, "
+        "you might want to remove either '--num-repeat' or '--rand-seed'.\n");
   }
   return 1;
 }
@@ -497,7 +500,6 @@ void main_constraints_info() {
 
   /* Generate the task set and print on terminal the result*/
   ts_rand(&my_task_set, &rand_setup);
-  ts_print(&my_task_set);
 
   edf_create_points(&my_task_set, &my_points);
   if (arguments.verbose) { /* verbose output*/

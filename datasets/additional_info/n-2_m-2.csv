@@ -1,0 +1,3 @@
+Seed,T1,D1,Ratio1,a_1,T2,D2,Ratio2,a_2,t,diff1,diff2,task1_gen_t,task2_gen_t,H,m,Command
+617,30660,25384.633236,0.827940,1,104370,134752.591381,1.291105,0.99999999999999989,1.000000,5275.366764,-30382.591381,0,0,15238020,2,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1 -e --rand-seed=617
+617,30660,25384.633236,0.827940,1.2078173324488271,104370,134752.591381,1.291105,0,25384.633236,0.000000,-4997.958145,1,0,15238020,2,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1 -e --rand-seed=617

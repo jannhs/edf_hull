@@ -1,0 +1,2 @@
+Seed,T1,D1,Ratio1,a_1,T2,D2,Ratio2,a_2,t,diff1,diff2,task1_gen_t,task2_gen_t,H,m,Command
+431,282240,352866.408003,1.250235,1,4032,5100.495996,1.265004,1,1.000000,-70626.408003,-1068.495996,0,0,282240,1,../edf_hull --num=2 --period-min=4 --period-max=300000 --num-repeat=1000 -s --eps 1e-9 --relative-dl-var=0.3 --relative-dl-avg=1 -e --rand-seed=431
